@@ -1,0 +1,68 @@
+:root {
+  --laptop-width: 1366px;
+  --laptop-height: calc(var(--laptop-width) * .585);
+  --laptop-keyboard-width: calc(var(--laptop-width) * 1.171);
+  --laptop-keyboard-height: calc(var(--laptop-height) * .075);
+}
+
+.laptop {
+  transform-origin: 0 bottom;
+  transform: scale(.7) translateY(-60px);/* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  position: relative;
+  width: var(--laptop-width);
+  height: var(--laptop-height);
+  /*width: 1366px;*/
+  /*height: 800px;*/
+  border-radius: 6px;
+  border-style: solid;
+  border-color: black;
+  border-width: 24px 24px 80px;
+  background-color: black;
+}
+
+  /* The keyboard of the laptop */
+  .laptop::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: var(--laptop-keyboard-width);
+    height: var(--laptop-keyboard-height);
+    /*width: 1600px;*/
+    /*height: 60px;*/
+    margin: 80px 0 0 0;
+    background: black;
+    border-radius: 6px;
+  }
+
+  /* The top of the keyboard */
+  .laptop::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    bottom: -110px;
+    left: 50%;
+    transform: translate(-50%);
+    background: #f1f1f1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 1;
+  }
+
+  /* Screen content */
+  .laptop .content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+  }
+
+    .laptop .content iframe {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border: none;
+    }

@@ -1,0 +1,116 @@
+:root {
+  --smartphone-width: 360px;
+  --smartphone-height: calc(var(--smartphone-width) * 1.777);
+}
+
+.smartphone {
+  display: inline-block;
+  position: relative;
+  width: var(--smartphone-width);
+  height: var(--smartphone-height);
+  /*width: 360px;*/
+  /*height: 640px;*/
+  border: 16px black solid;
+  border-radius: 36px;
+}
+
+.smartphone.portrait {
+  width: var(--smartphone-width);
+  height: var(--smartphone-height);
+  /*width: 360px;*/
+  /*height: 640px;*/
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+}
+
+.smartphone.landscape {
+  width: var(--smartphone-height);
+  height: var(--smartphone-width);
+  /*width: 640px;*/
+  /*height: 360px;*/
+  border-left-width: 60px;
+  border-right-width: 60px;
+}
+
+  /* The horizontal line on the top of the device */
+  .smartphone::before {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  .smartphone.portrait::before {
+    top: -30px;
+    left: 50%;
+    width: 60px;
+    height: 5px;
+  }
+
+  .smartphone.landscape::before {
+    top: 50%;
+    left: -30px;
+    width: 5px;
+    height: 60px;
+  }
+
+  /* Home button */
+  .smartphone::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    /*left: 50%;
+    bottom: -65px;*/
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  .smartphone.portrait::after {
+    left: 50%;
+    bottom: -65px;
+  }
+
+  .smartphone.landscape::after {
+    right: -65px;
+    top: 50%;
+  }
+
+  /* Screen content */
+  .smartphone .content {
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+
+    .smartphone .content iframe {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border: none;
+    }
+
+    /* Device shadow */
+    .smartphone .content::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      width: 90%;
+      height: 16px;
+      transform: translateX(-50%);
+      border-radius: 100% / 8px;
+      box-shadow: 0 10px 20px #000;
+    }
+
+    .smartphone.portrait .content::after {
+      bottom: -60px;
+    }
+
+    .smartphone.landscape .content::after {
+      bottom: -16px;
+    }
