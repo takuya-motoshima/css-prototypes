@@ -1,0 +1,59 @@
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+  .custom-scrollbar::-webkit-scrollbar-thumb,
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+  .custom-scrollbar::-webkit-scrollbar-thumb:window-inactive {
+    cursor: pointer;
+  }
+
+.custom-scrollbar-1::-webkit-scrollbar-thumb,
+.custom-scrollbar-1::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar-1::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #b4d7e8;
+}
+
+.custom-scrollbar-1::-webkit-scrollbar-track {
+  background: #fffbda;
+}
+
+.custom-scrollbar-2::-webkit-scrollbar-thumb,
+.custom-scrollbar-2::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar-2::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #f28a8b;
+}
+
+.custom-scrollbar-2::-webkit-scrollbar-track {
+  background: #6d698a;
+}
+
+.custom-scrollbar-3::-webkit-scrollbar-thumb,
+.custom-scrollbar-3::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar-3::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #de8e8d;
+}
+
+.custom-scrollbar-3::-webkit-scrollbar-track {
+  background: #1b1f3a;
+}
+
+.custom-scrollbar-4::-webkit-scrollbar-thumb,
+.custom-scrollbar-4::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar-4::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #a5cfdb;
+}
+
+.custom-scrollbar-4::-webkit-scrollbar-track {
+  background: #1c2b6e;
+}
+
+.custom-scrollbar-5::-webkit-scrollbar-thumb,
+.custom-scrollbar-5::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar-5::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #555e7d;
+}
+
+.custom-scrollbar-5::-webkit-scrollbar-track {
+  background: #7395c2;
+}

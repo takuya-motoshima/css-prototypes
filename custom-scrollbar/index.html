@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="styles/custom-scrollbar.css">
+  <style>
+    .content {
+      display: inline-block;
+      margin-right: 10px;
+      width: 200px;
+      height: 266px;
+      background: #f1f1f1;
+      overflow-y: scroll;
+    }
+
+      .content::after {
+        content: '';
+        display: block;
+        height: 1000px;
+      }
+  </style>
+</head>
+<body>
+  <div class="content custom-scrollbar custom-scrollbar-1"></div>
+  <div class="content custom-scrollbar custom-scrollbar-2"></div>
+  <div class="content custom-scrollbar custom-scrollbar-3"></div>
+  <div class="content custom-scrollbar custom-scrollbar-4"></div>
+  <div class="content custom-scrollbar custom-scrollbar-5"></div>
+  <script>
+    for (let cotent of document.querySelectorAll('.content')) {
+      cotent.scrollTop = 300;
+    }
+  </script>
+</body>
+</html>
